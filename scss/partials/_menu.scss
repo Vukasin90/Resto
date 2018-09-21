@@ -81,6 +81,7 @@
     justify-content: flex-end;
     align-items: center;
     cursor: pointer;
+    transition: all 200ms ease-in-out;
     span {
         font-family: $aleo-regular;
         font-size: 14px;
@@ -93,6 +94,15 @@
         height: 10px;
         background: $white;
         margin: 0 0 0 10px;
+    }
+    &:hover {
+        box-shadow: 15px 10px 40px rgba($black, 0.5);
+        transform: translateX(-90px) scale(1.03);
+        transition: all 200ms ease-in-out;
+    }
+    &:active {
+        position: relative;
+        top: 2px;
     }
 }
 

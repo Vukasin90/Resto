@@ -1,6 +1,6 @@
 .gallery {
-    padding: 185px 0 200px;
-    h1 {
+    padding: 185px 0 125px;
+    h2 {
         font-family: $aleo-bold;
         font-size: 22px;
         color: $txt-dark-gray;
@@ -39,6 +39,7 @@
     overflow: hidden;
     position: relative;
     cursor: pointer;
+    overflow: hidden;
     @include mq(989px) {
         grid-column: 1;
         grid-row: span 1;
@@ -47,6 +48,11 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
+        transition: all 500ms ease-in-out;
+    }
+    &:hover img {
+        transform: scale(1.3);
+        transition: all 500ms ease-in-out;
     }
 }
 
@@ -96,6 +102,28 @@
     display: none;
     justify-content: center;
     align-items: center;
+    z-index: 2;
+}
+
+.gallery-left, .gallery-right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 40px;
+    color: $white;
+    cursor: pointer;
+    z-index: 2;
+    &:hover {
+        color: $theme-color;
+    }
+}
+
+.gallery-left {
+    left: 0;
+}
+
+.gallery-right {
+    right: 0;
 }
 
 .img-modal {
